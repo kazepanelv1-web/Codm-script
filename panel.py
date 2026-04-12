@@ -14,7 +14,7 @@ CORS(app)
 # ======================
 # CONSTANTS
 # ======================
-TOKEN_EXPIRY = 20      # seconds for token expiry
+TOKEN_EXPIRY = 60      # seconds for token expiry
 COOLDOWN = 120           # anti-spam cooldown
 KEY_LIMIT = 120         # seconds before same IP can generate another key
 DATA_FILE = "database.json"
@@ -108,7 +108,7 @@ def token():
             if elapsed < COOLDOWN:
                 return jsonify({
                     "status":"cooldown",
-                    "redirect":"https://kazehayamodz-main-page-zua8.onrender.com"
+                    "redirect":"https://kazehayamodz-main-page-pgp5.onrender.com"
                 })
 
     # GENERATE TOKEN
